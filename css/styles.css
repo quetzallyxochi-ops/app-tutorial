@@ -1,0 +1,317 @@
+:root {
+  --primary-color: #0f172a;
+  --secondary-color: #2563eb;
+  --accent-color: #38bdf8;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #334155;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --sidebar-width: 260px;
+  --right-panel-width: 280px;
+  --radius: 10px;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Encabezado Superior Rediseñado */
+header {
+  background: linear-gradient(135deg, var(--primary-color), #1e293b);
+  color: #ffffff;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.logo-img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.header-right .menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Contenedor Principal (Boceto de 3 columnas) */
+.app-container {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr var(--right-panel-width);
+  flex: 1;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Columna Lateral Izquierda (Menú) */
+aside.sidebar {
+  background-color: var(--card-bg);
+  border-right: 1px solid var(--border-color);
+  padding: 1.5rem 1rem;
+  overflow-y: auto;
+  position: sticky;
+  top: 75px;
+  height: calc(100vh - 75px);
+}
+
+aside.sidebar h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+aside.sidebar ul {
+  list-style: none;
+}
+
+aside.sidebar ul li {
+  margin-bottom: 0.5rem;
+}
+
+aside.sidebar ul li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--text-main);
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+aside.sidebar ul li a:hover,
+aside.sidebar ul li a.active {
+  background-color: #eff6ff;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+/* Área Central (Cuerpo de la página) */
+main.content-area {
+  padding: 2rem;
+  background-color: var(--bg-color);
+  overflow-y: auto;
+}
+
+.content-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.content-card h2 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.content-card h3 {
+  color: var(--secondary-color);
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.content-card p {
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+.content-card ul, .content-card ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.content-card li {
+  margin-bottom: 0.5rem;
+}
+
+/* Columna Lateral Derecha (Panel complementario) */
+aside.right-panel {
+  background-color: var(--card-bg);
+  border-left: 1px solid var(--border-color);
+  padding: 1.5rem;
+  position: sticky;
+  top: 75px;
+  height: calc(100vh - 75px);
+  overflow-y: auto;
+}
+
+.widget {
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.widget h4 {
+  font-size: 0.95rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.25rem;
+}
+
+.widget p, .widget ul {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Imágenes e Ilustraciones */
+.media-container {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.media-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+}
+
+/* Solución para Videos de YouTube (Evita Error 153 de reproducción externa) */
+.video-resource-box {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  border-radius: 10px;
+  padding: 1.8rem;
+  text-align: center;
+  color: white;
+  margin: 2rem 0;
+  box-shadow: var(--shadow);
+}
+
+.video-resource-box p {
+  color: #cbd5e1;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+}
+
+.youtube-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ef4444;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.youtube-btn:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* Pie de Página */
+footer {
+  background-color: var(--primary-color);
+  color: #94a3b8;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Responsividad */
+@media (max-width: 1100px) {
+  .app-container {
+    grid-template-columns: var(--sidebar-width) 1fr;
+  }
+  aside.right-panel {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    grid-template-columns: 1fr;
+  }
+  aside.sidebar {
+    position: fixed;
+    left: -100%;
+    top: 75px;
+    width: 260px;
+    height: calc(100vh - 75px);
+    transition: left 0.3s ease;
+    z-index: 999;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+  }
+  aside.sidebar.open {
+    left: 0;
+  }
+  .header-right .menu-toggle {
+    display: block;
+  }
+  main.content-area {
+    padding: 1rem;
+  }
+  .content-card {
+    padding: 1.5rem;
+  }
+}

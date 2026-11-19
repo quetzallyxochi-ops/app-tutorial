@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursos Multimedia - Tutorial Móvil</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+  <div class="header-left">
+    <a href="index.html" class="logo-link" title="Ir a la pantalla principal">
+      <img src="img/icono.png" alt="Logotipo del Tutorial" class="logo-img">
+    </a>
+    <h1>Tutorial: Desarrollo de Aplicaciones Móviles</h1>
+  </div>
+</header>
+
+  <div class="app-container">
+    <aside class="sidebar">
+      <h3>Índice de Temas</h3>
+      <ul>
+        <li><a href="index.html">Inicio / Bienvenida</a></li>
+        <li><a href="control-versiones.html">1. Control de Versiones</a></li>
+        <li><a href="persistencia-datos.html">2. Persistencia y Datos</a></li>
+        <li><a href="gestion-sensores.html">3. Gestión de Sensores</a></li>
+        <li><a href="recursos-multimedia.html">4. Recursos Multimedia</a></li>
+        <li><a href="servicios-notificaciones.html">5. Servicios y Notificaciones</a></li>
+        <li><a href="librerias-toolkits.html">6. Librerías y Toolkits</a></li>
+        <li><a href="depuracion-seguridad.html">7. Depuración y Seguridad</a></li>
+        <li><a href="referencias.html">Referencias Bibliográficas</a></li>
+      </ul>
+    </aside>
+
+    <main class="content-area">
+      <section class="content-card">
+        <h2>4. Uso de Recursos Multimedia</h2>
+        
+        <h3>Definición</h3>
+        <p>Los recursos multimedia engloban todos los elementos de contenido no textual integrados en una aplicación móvil, tales como gráficos, flujos de audio, secuencias de video y animaciones, diseñados para enriquecer la experiencia de usuario (UX).</p>
+
+        <h3>Tipos de Recursos Multimedia Aplicables a Programación Móvil</h3>
+        <ul>
+          <li><strong>Imágenes:</strong> Formatos rasterizados (PNG, JPEG, WebP) y vectoriales (SVG / Vector Drawables) para iconos, fondos y elementos de interfaz.</li>
+          <li><strong>Audio:</strong> Archivos comprimidos o sin pérdida (MP3, AAC, WAV) para efectos de sonido (SFX) y reproducción de música o podcasts.</li>
+          <li><strong>Video:</strong> Contenedores multimedia (MP4, MKV, H.264) para tutoriales, reproducción en streaming y cinemáticas.</li>
+          <li><strong>Animaciones y Elementos Visuales Dinámicos:</strong> Animaciones basadas en fotogramas, vectores animados (Lottie files) y transiciones fluidas de interfaz.</li>
+        </ul>
+
+        <h3>Elementos de la Estructura de Proyectos donde se Almacenan</h3>
+        <p>En proyectos nativos (Android/iOS), los recursos se ubican en carpetas especializadas como <code>res/drawable</code>, <code>res/mipmap</code> y <code>res/raw</code> (en Android) o en el directorio <code>Assets.xcassets</code> (en iOS), permitiendo el empaquetado optimizado según la densidad de pantalla (mdpi, xhdpi, xxhdpi) y localización.</p>
+
+        <h3>Componentes de Software en el Uso de Recursos Multimedia</h3>
+        <p>Se emplean clases especializadas del framework como <code>MediaPlayer</code>, <code>ExoPlayer</code> (reproducción avanzada de video/audio), y librerías de carga de imágenes asíncronas como Glide, Picasso o Coil para evitar bloqueos en el hilo principal (UI Thread) y prevenir fugas de memoria (OutOfMemoryError).</p>
+
+        <div class="media-container">
+          <img src="img/media-pipeline.png" alt="Pipeline de procesamiento y carga de recursos multimedia móviles">
+        </div>
+
+        <!---<div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/319v8rQ5JZI" title="Tutorial de Multimedia en Android Studio" allowfullscreen></iframe>
+        </div> --->
+      </section>
+    </main> 
+
+    <aside class="right-panel">
+      <div class="widget">
+        <h4>Resumen del Tema</h4>
+        <p>Garantiza una interfaz visual atractiva y fluida sin comprometer el rendimiento del dispositivo.</p>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 - Tutorial de Desarrollo de Aplicaciones Móviles</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

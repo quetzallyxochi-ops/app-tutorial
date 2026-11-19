@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Sensores - Tutorial Móvil</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+  <div class="header-left">
+    <a href="index.html" class="logo-link" title="Ir a la pantalla principal">
+      <img src="img/icono.png" alt="Logotipo del Tutorial" class="logo-img">
+    </a>
+    <h1>Tutorial: Desarrollo de Aplicaciones Móviles</h1>
+  </div>
+</header>
+
+  <div class="app-container">
+    <aside class="sidebar">
+      <h3>Índice de Temas</h3>
+      <ul>
+        <li><a href="index.html">Inicio / Bienvenida</a></li>
+        <li><a href="control-versiones.html">1. Control de Versiones</a></li>
+        <li><a href="persistencia-datos.html">2. Persistencia y Datos</a></li>
+        <li><a href="gestion-sensores.html">3. Gestión de Sensores</a></li>
+        <li><a href="recursos-multimedia.html">4. Recursos Multimedia</a></li>
+        <li><a href="servicios-notificaciones.html">5. Servicios y Notificaciones</a></li>
+        <li><a href="librerias-toolkits.html">6. Librerías y Toolkits</a></li>
+        <li><a href="depuracion-seguridad.html">7. Depuración y Seguridad</a></li>
+        <li><a href="referencias.html">Referencias Bibliográficas</a></li>
+      </ul>
+    </aside>
+
+    <main class="content-area">
+      <section class="content-card">
+        <h2>3. Gestión de Sensores en Dispositivos Móviles</h2>
+        
+        <h3>Definición de Sensores</h3>
+        <p>Los sensores son componentes de hardware integrados en los dispositivos móviles que detectan eventos o cambios físicos en el entorno (movimiento, luz, campo magnético, ubicación) y convierten dichas magnitudes físicas en señales eléctricas legibles por el procesador y el software de la aplicación.</p>
+
+        <h3>Tipos de Sensores en Dispositivos Móviles</h3>
+        <ul>
+          <li><strong>Sensores de Movimiento:</strong> Acelerómetro (mide aceleración lineal en 3 ejes), giroscopio (mide velocidad de rotación) y podómetro (conteo de pasos).</li>
+          <li><strong>Sensores de Posición:</strong> Magnetómetro (brújula digital) y GPS (geolocalización por constelación de satélites).</li>
+          <li><strong>Sensores Ambientales:</strong> Sensor de luz ambiental (ajuste automático de brillo de pantalla), barómetro (presión atmosférica) y sensor de proximidad (desactiva pantalla en llamadas).</li>
+        </ul>
+
+        <h3>Proceso de Gestión de Sensores</h3>
+        <p>El ciclo de vida para utilizar sensores consta de tres etapas fundamentales:</p>
+        <ol>
+          <li><strong>Habilitación:</strong> Solicitud de permisos en tiempo de ejecución (ej. <code>ACCESS_FINE_LOCATION</code>) y verificación de disponibilidad del hardware mediante el administrador de sensores (<code>SensorManager</code>).</li>
+          <li><strong>Obtención de Información:</strong> Registro de escuchas o listeners (<code>SensorEventListener</code>) para capturar flujos de datos continuos o cambios de estado con frecuencias configurables (ej. <code>SENSOR_DELAY_NORMAL</code>).</li>
+          <li><strong>Procesamiento de Información:</strong> Filtrado de ruido, conversión de coordenadas, cálculo de vectores y activación de lógica de negocio en la interfaz de usuario.</li>
+        </ol>
+
+        <div class="media-container">
+          <img src="img/sensor-flow.png" alt="Diagrama de flujo de habilitación y lectura de sensores móviles">
+        </div>
+
+        <div class="video-resource-box">
+        <h3>Video Explicativo Recomendado</h3>
+        <p>Profundiza en los conceptos clave de este tema a través de nuestra selección audiovisual en YouTube.</p>
+        <a href="https://www.youtube.com/embed/7582b_1A3ic" target="_blank" class="youtube-btn">
+            ▶ Ver video explicativo en YouTube
+        </a>
+        </div>
+    
+      </section>
+    </main>
+
+    <aside class="right-panel">
+      <div class="widget">
+        <h4>Resumen del Tema</h4>
+        <p>Permite crear experiencias interactivas basadas en el entorno físico del usuario.</p>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 - Tutorial de Desarrollo de Aplicaciones Móviles</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios y Notificaciones - Tutorial Móvil</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+  <div class="header-left">
+    <a href="index.html" class="logo-link" title="Ir a la pantalla principal">
+      <img src="img/icono.png" alt="Logotipo del Tutorial" class="logo-img">
+    </a>
+    <h1>Tutorial: Desarrollo de Aplicaciones Móviles</h1>
+  </div>
+</header>
+
+  <div class="app-container">
+    <aside class="sidebar">
+      <h3>Índice de Temas</h3>
+      <ul>
+        <li><a href="index.html">Inicio / Bienvenida</a></li>
+        <li><a href="control-versiones.html">1. Control de Versiones</a></li>
+        <li><a href="persistencia-datos.html">2. Persistencia y Datos</a></li>
+        <li><a href="gestion-sensores.html">3. Gestión de Sensores</a></li>
+        <li><a href="recursos-multimedia.html">4. Recursos Multimedia</a></li>
+        <li><a href="servicios-notificaciones.html">5. Servicios y Notificaciones</a></li>
+        <li><a href="librerias-toolkits.html">6. Librerías y Toolkits</a></li>
+        <li><a href="depuracion-seguridad.html">7. Depuración y Seguridad</a></li>
+        <li><a href="referencias.html">Referencias Bibliográficas</a></li>
+      </ul>
+    </aside>
+
+    <main class="content-area">
+      <section class="content-card">
+        <h2>5. Servicios y Notificaciones</h2>
+        
+        <h3>Definición</h3>
+        <p>Los servicios y sistemas de notificación permiten que una aplicación móvil ejecute operaciones lógicas de larga duración sin interfaz gráfica y se comunique con el usuario de manera proactiva cuando ocurren eventos relevantes.</p>
+
+        <h3>Tareas en Segundo Plano (Background Tasks)</h3>
+        <p>Son procesos que se ejecutan fuera del ciclo de vida visual de las actividades (Activities/ViewControllers), tales como sincronización de bases de datos locales con servidores remotos, descargas de archivos pesados o procesamiento de geocercas.</p>
+
+        <h3>Tratamiento de Notificaciones en Aplicaciones Móviles</h3>
+        <ul>
+          <li><strong>Notificaciones Locales:</strong> Programadas y disparadas directamente por el dispositivo (ej. recordatorios de calendario o alarmas).</li>
+          <li><strong>Notificaciones Push (Remotas):</strong> Enviadas desde servidores en la nube a través de proveedores como Firebase Cloud Messaging (FCM) o Apple Push Notification service (APNs).</li>
+        </ul>
+
+        <h3>Proceso de Implementación</h3>
+        <ul>
+          <li><strong>Proveedores de Contenido (Content Providers):</strong> Encapsulan datos y permiten compartirlos de forma segura entre diferentes aplicaciones mediante esquemas URI.</li>
+          <li><strong>Tareas en Segundo Plano:</strong> Implementación mediante APIs modernas como WorkManager (Android) para garantizar ejecuciones diferidas y fiables.</li>
+          <li><strong>Notificaciones:</strong> Creación de canales de notificación (Notification Channels) y gestión de permisos de usuario.</li>
+        </ul>
+
+        <h3>Servicios de Cómputo en la Nube Aplicables</h3>
+        <p>Plataformas BaaS (Backend-as-a-Service) como Firebase, AWS Amplify o Microsoft Azure Mobile Apps, que ofrecen autenticación, bases de datos en tiempo real, funciones serverless y pasarelas de mensajería push.</p>
+
+        <div class="media-container">
+          <img src="img/cloud-push.png" alt="Diagrama de arquitectura de notificaciones Push y Firebase Cloud Messaging">
+        </div>
+        <!---
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/Y2V7_tbVw6g" title="Tutorial de Notificaciones Push y FCM" allowfullscreen></iframe>
+        </div>  -->
+      </section>
+    </main>
+
+    <aside class="right-panel">
+      <div class="widget">
+        <h4>Resumen del Tema</h4>
+        <p>Vital para mantener al usuario enganchado y asegurar la sincronización de datos en segundo plano.</p>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 - Tutorial de Desarrollo de Aplicaciones Móviles</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

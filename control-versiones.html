@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control de Versiones - Tutorial Móvil</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+  <div class="header-left">
+    <a href="index.html" class="logo-link" title="Ir a la pantalla principal">
+      <img src="img/icono.png" alt="Logotipo del Tutorial" class="logo-img">
+    </a>
+    <h1>Tutorial: Desarrollo de Aplicaciones Móviles</h1>
+  </div>
+</header>
+
+  <div class="app-container">
+    <aside class="sidebar">
+      <h3>Índice de Temas</h3>
+      <ul>
+        <li><a href="index.html">Inicio / Bienvenida</a></li>
+        <li><a href="control-versiones.html">1. Control de Versiones</a></li>
+        <li><a href="persistencia-datos.html">2. Persistencia y Datos</a></li>
+        <li><a href="gestion-sensores.html">3. Gestión de Sensores</a></li>
+        <li><a href="recursos-multimedia.html">4. Recursos Multimedia</a></li>
+        <li><a href="servicios-notificaciones.html">5. Servicios y Notificaciones</a></li>
+        <li><a href="librerias-toolkits.html">6. Librerías y Toolkits</a></li>
+        <li><a href="depuracion-seguridad.html">7. Depuración y Seguridad</a></li>
+        <li><a href="referencias.html">Referencias Bibliográficas</a></li>
+      </ul>
+    </aside>
+
+    <main class="content-area">
+      <section class="content-card">
+        <h2>1. Control de Versiones en el Desarrollo Móvil</h2>
+        
+        <h3>Definición</h3>
+        <p>El control de versiones es un sistema que registra los cambios realizados en un conjunto de archivos a lo largo del tiempo, permitiendo recuperar versiones específicas en el futuro, auditar modificaciones y coordinar el trabajo colaborativo entre múltiples desarrolladores en un proyecto de software móvil.</p>
+
+        <h3>¿Cuáles son? (Sistemas Principales)</h3>
+        <ul>
+          <li><strong>Git (Sistema Distribuido):</strong> Cada desarrollador posee una copia local completa del repositorio, incluyendo el historial de cambios completo.</li>
+          <li><strong>SVN - Subversion (Sistema Centralizado):</strong> Utiliza un único servidor central que almacena todas las versiones de los archivos; los clientes descargan solo las instantáneas actuales.</li>
+          <li><strong>Mercurial (Sistema Distribuido):</strong> Alternativa distribuida similar a Git, centrada en la facilidad de uso y rendimiento en repositorios grandes.</li>
+        </ul>
+
+        <h3>Características, Ventajas y Desventajas</h3>
+        <ul>
+          <li><strong>Git:</strong>
+            <ul>
+              <li><em>Características:</em> Descentralizado, soporte robusto para ramificación (branching) y fusión (merging), integridad criptográfica SHA-1.</li>
+              <li><em>Ventajas:</em> Trabajo offline total, alta velocidad, estándar de la industria (GitHub, GitLab, Bitbucket).</li>
+              <li><em>Desventajas:</em> Curva de aprendizaje empinada para principiantes.</li>
+            </ul>
+          </li>
+          <li><strong>SVN:</strong>
+            <ul>
+              <li><em>Características:</em> Arquitectura cliente-servidor centralizada, control de versiones atómico, bloqueo de archivos opcional.</li>
+              <li><em>Ventajas:</em> Estructura conceptual sencilla, control estricto sobre permisos de directorios grandes.</li>
+              <li><em>Desventajas:</em> Dependencia crítica de la red (sin conexión no se puede commitear ni revisar historial local), fusión de ramas compleja.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>Funcionamiento y Uso en Rastreo y Gestión de Cambios</h3>
+        <p>Los sistemas de control de versiones operan mediante instantáneas (snapshots) o deltas de código. En el ciclo de vida de desarrollo móvil, Git gestiona el flujo mediante áreas de trabajo (Working Directory, Staging Area / Index, y Repository). Permite crear ramas experimentales (feature branches) para desarrollar componentes específicos (por ejemplo, la integración de pasarelas de pago o sensores) sin alterar la rama principal estable (`main` o `master`).</p>
+
+        <div class="media-container">
+          <img src="img/git-workflow.png" alt="Diagrama del flujo de trabajo en Git con ramas y fusiones">
+        </div>
+
+        <h3>Ejemplos de Uso Práctico</h3>
+        <p>Uso del comando <code>git checkout -b feature/sensor-gps</code> para iniciar el desarrollo aislado de la geolocalización, seguido de <code>git commit -m "Implementación inicial de ubicación en tiempo real"</code>.</p>
+
+       <div class="video-resource-box">
+        <h3>Video Explicativo Recomendado</h3>
+        <p>Profundiza en los conceptos clave de este tema a través de nuestra selección audiovisual en YouTube.</p>
+        <a href="https://www.youtube.com/watch?v=8JJ101D3knE" target="_blank" class="youtube-btn">
+            ▶ Ver video explicativo en YouTube
+        </a>
+        </div>
+      </section>
+    </main>
+
+    <aside class="right-panel">
+      <div class="widget">
+        <h4>Resumen del Tema</h4>
+        <p>Esencial para mantener la trazabilidad del código y evitar la pérdida de avances en equipos móviles.</p>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 - Tutorial de Desarrollo de Aplicaciones Móviles</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
